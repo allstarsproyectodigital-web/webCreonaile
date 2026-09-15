@@ -28,7 +28,7 @@ export default function Home() {
  <section id="servicios" className="section container">
  <div className="section-heading"><div><p className="eyebrow">Acompañamiento especializado</p><h2>Cada historia necesita<br/><em>una forma distinta de cuidado.</em></h2></div><p className="section-lead">Atención presencial y online con una mirada clínica, humana y adaptada a tu momento vital.</p></div>
  <div className="services-grid">{services.map(([tag,title,description],i)=><article key={tag} className="service-card">
- <Image src={'/images/service-'+(i+1)+'.webp'} alt="" fill sizes="(max-width: 650px) 100vw, (max-width: 900px) 50vw, 33vw" className="service-image"/>
+ <Image src={'/images/service-'+(i+1)+'-v2.avif'} alt="" fill sizes="(max-width: 650px) 100vw, (max-width: 900px) 50vw, 33vw" className="service-image"/>
  <div className="service-inner"><p className="service-tag">0{i+1} · {tag}</p><div><h3>{title}</h3><p>{description}</p><a href={wa+'?text='+encodeURIComponent('Hola Creonaile, me gustaría consultar el servicio de '+title+'.')} target="_blank" rel="noopener noreferrer" aria-label={'Consultar '+title+' por WhatsApp'}>Consultar este servicio ↗</a></div></div>
  </article>)}</div></section>
  <section className="process soft-gradient"><div className="container process-grid"><div><p className="eyebrow">Tu proceso</p><h2>Con calma<br/><em>y sin<br/>presión.</em></h2></div>{[

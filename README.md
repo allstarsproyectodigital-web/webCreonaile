@@ -11,7 +11,8 @@ Verificar con pnpm build y pnpm typecheck.
 
 - Diseño, textos, precios, teléfono, colegiación y trayectoria: vídeo aportado por el cliente.
 - Retrato: imagen original aportada por el cliente.
-- Fotografías de servicios, mar y portada: regiones sin texto de los fotogramas aportados (la portada conserva su marca). Son recursos provisionales de resolución limitada; sustituir por los originales para máxima fidelidad.
+- Mar y seis escenas de servicios: imágenes ilustrativas generadas con la herramienta integrada de imágenes, según la petición del cliente. Las personas son ficticias; no representan a Creonaile ni a pacientes reales. Véase IMAGE-PROMPTS.md.
+- Portada: fotograma del vídeo aportado; recurso provisional de resolución limitada.
 - Libro y enlace: https://www.todostuslibros.com/libros/mis-abuelos-se-van-a-la-residencia_978-84-1060-539-8
 - Datos editoriales contrastados: https://apuleyoediciones.com/producto/mis-abuelos-se-van-a-la-residencia/
 

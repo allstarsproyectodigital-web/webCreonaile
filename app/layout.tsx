@@ -5,7 +5,7 @@ const production=process.env.VERCEL_ENV==='production' && Boolean(siteUrl);
 const title='Creonaile Ramos | Psicóloga en Pozuelo de Alarcón y online';
 const description='Psicología sanitaria en Pozuelo de Alarcón y online. Trauma, EMDR, mayores, memoria y acompañamiento familiar. Primera toma de contacto gratuita.';
 export const metadata:Metadata={
- metadataBase:new URL(siteUrl || 'https://web-creonaile.vercel.app'),
+ metadataBase:new URL(siteUrl || (process.env.VERCEL_URL ? 'https://'+process.env.VERCEL_URL : 'http://localhost:3000')),
  title,description,applicationName:'Creonaile Ramos',
  robots:{index:production,follow:production},
  ...(siteUrl?{alternates:{canonical:siteUrl}}:{}),

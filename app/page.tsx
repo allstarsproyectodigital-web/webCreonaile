@@ -1,10 +1,34 @@
 const services = [
-  ["Psicología sanitaria", "Evaluación, orientación y acompañamiento psicológico desde una mirada cercana, humana y profesional."],
-  ["Psicología de la vejez", "Acompañamiento emocional en procesos de envejecimiento, pérdidas, cambios vitales y adaptación."],
-  ["Estimulación cognitiva", "Trabajo de memoria, atención, lenguaje y funciones ejecutivas adaptado a cada persona."],
-  ["Trauma y EMDR", "Intervención especializada para experiencias traumáticas, bloqueos emocionales y recuerdos que siguen pesando."],
-  ["Demencias y familias", "Apoyo a personas con deterioro cognitivo y orientación práctica y emocional a sus familias."],
-  ["Acompañamiento emocional", "Un espacio seguro para comprender lo que ocurre, ordenar emociones y recuperar recursos personales."],
+  {
+    title: "Psicología sanitaria",
+    text: "Evaluación, orientación y acompañamiento psicológico desde una mirada cercana, humana y profesional.",
+    image: "/services/psychology.svg",
+  },
+  {
+    title: "Psicología de la vejez",
+    text: "Acompañamiento emocional en procesos de envejecimiento, pérdidas, cambios vitales y adaptación.",
+    image: "/services/aging.svg",
+  },
+  {
+    title: "Estimulación cognitiva",
+    text: "Trabajo de memoria, atención, lenguaje y funciones ejecutivas adaptado a cada persona.",
+    image: "/services/cognitive.svg",
+  },
+  {
+    title: "Trauma y EMDR",
+    text: "Intervención especializada para experiencias traumáticas, bloqueos emocionales y recuerdos que siguen pesando.",
+    image: "/services/emdr.svg",
+  },
+  {
+    title: "Demencias y familias",
+    text: "Apoyo a personas con deterioro cognitivo y orientación práctica y emocional a sus familias.",
+    image: "/services/aging.svg",
+  },
+  {
+    title: "Acompañamiento emocional",
+    text: "Un espacio seguro para comprender lo que ocurre, ordenar emociones y recuperar recursos personales.",
+    image: "/services/psychology.svg",
+  },
 ];
 
 export default function Home() {
@@ -66,11 +90,16 @@ export default function Home() {
           </p>
         </div>
         <div className="services-grid">
-          {services.map(([title, text], i) => (
+          {services.map(({ title, text, image }, i) => (
             <article className="service-card" key={title}>
-              <span className="service-index">0{i + 1}</span>
-              <h3>{title}</h3>
-              <p>{text}</p>
+              <div className="service-image-wrap">
+                <img className="service-image" src={image} alt={`${title} — Creonaile Ramos`} />
+              </div>
+              <div className="service-card-body">
+                <span className="service-index">0{i + 1}</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </div>
             </article>
           ))}
         </div>
